@@ -13,3 +13,8 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let name = Patrick;
+
+const returnGreeting = (name) => {
+  return 'Hello $(name)'
+};

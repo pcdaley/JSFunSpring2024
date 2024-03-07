@@ -4,3 +4,4 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let restaurants = ["cafe saigon", "chubby's", "leonard's bakery"];

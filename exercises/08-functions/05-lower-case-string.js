@@ -16,3 +16,10 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const lowerCaseString = (str) => {
+  console.log(lowerCaseString.toLowerCase);
+};
+
+if (typeof str === 'string') {
+  return lowerCaseString();
+}
