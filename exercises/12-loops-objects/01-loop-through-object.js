@@ -17,3 +17,5 @@ const links = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let html = Object.values(links);
+console.log(html);

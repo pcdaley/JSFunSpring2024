@@ -8,3 +8,9 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let myDog = {
+  name: "Luca",
+  breed: "Dachsund",
+  age: 4,
+  owners: ["Carlea", "Patrick"]
+};
