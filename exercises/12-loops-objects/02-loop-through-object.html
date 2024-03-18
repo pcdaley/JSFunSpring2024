@@ -60,6 +60,9 @@
          * The code below should go inside the loop.
          * Change the code below so that it will work for the other movies too.
          */
+         for (let title in movies) {
+  const movie = movies[title];
+
         let movie = movies["halloween-ends"];
         const htmlString = `<li class="list-group-item d-flex justify-content-between align-items-start">
           <div class="ms-2 me-auto">
