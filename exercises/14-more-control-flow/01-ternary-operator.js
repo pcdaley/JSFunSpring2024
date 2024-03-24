@@ -1,4 +1,4 @@
-let num = 8; // e.g.
+let num = 639; // e.g.
 
 /**
  * This is similar to an older problem.
@@ -11,3 +11,7 @@ let num = 8; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let isEvenOrOdd;
+const result = (num % 2  == 0) ? isEvenOrOdd = "even" : isEvenOrOdd = "odd";
+
+console.log(isEvenOrOdd);

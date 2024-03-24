@@ -1,4 +1,4 @@
-let error = "Username already exists."; // When the test runs, this could also be an empty string
+let error = "Oops! You did it again."; // When the test runs, this could also be an empty string
 
 /**
  * Use short circuiting to solve this problem.
@@ -11,3 +11,6 @@ let error = "Username already exists."; // When the test runs, this could also b
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let errorMessage = error || "An unexpected error occured.";
+console.log(errorMessage);
+
