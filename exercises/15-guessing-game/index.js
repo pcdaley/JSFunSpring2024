@@ -11,17 +11,13 @@ const getRandomIntInclusive = (min, max) => {
   //Evaluate user guesses:  
 const evaluate = (userNumber, gameNumber) => {
   if (userNumber >10 || userNumber<1) {
-    return "Please enter a number from 1 to 10.";
-  }
+    return "\nPlease enter a number from 1 to 10.\n";}
   else if (userNumber<gameNumber) {
-    return "Too low!";
-  }
+    return "\nToo low!\n";}
   else if (userNumber>gameNumber) {
-    return "Too high!";
-  }
+    return "\nToo high!\n";}
   else if (userNumber === gameNumber) {
-    console.log("Correct! Game over.");
-  }};
+    console.log("\nCorrect! Game over.\n");}};
 
   //Current game number:  
 const gameNumber = console.log(getRandomIntInclusive(1, 10));
@@ -42,14 +38,12 @@ console.log("\nWelcome to the Guessing Game!\nPress ctrl+c to stop.\n");
 
 console.log(prompt.question("\nPlease guess a number from 1 to 10.\n"));
 
-while (userNumber!=gameNumber) {
-  let userNumber=parseInt(prompt.question("Please guess a number from 1 to 10"), 10);
-  const feedback=evaluate(userNumber, gameNumber);
+while (userNumber != gameNumber) {
+  let userNumber = parseInt(prompt.question("/nPlease guess a number from 1 to 10/n"), 10);
+  const feedback = evaluate(userNumber, gameNumber);
   console.log(feedback);
-  if (feedback==="Correct! Game over.") {
-    break;
-  }
-}
+  if (feedback === "/nCorrect! Game over./n") {
+    break;}}
 
 
 
