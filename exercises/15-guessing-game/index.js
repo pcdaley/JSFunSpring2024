@@ -1,11 +1,14 @@
-//Game functions//
+//____________
+//GAME SETUP//
 
 
+  //Generate random number:
 const getRandomIntInclusive = (min, max) => {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
   return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);};
 
+  //Evaluate user guesses:  
 const evaluate = (userNumber, gameNumber) => {
   if (userNumber >10 || userNumber<1) {
     return "Please enter a number from 1 to 10.";
@@ -15,31 +18,40 @@ const evaluate = (userNumber, gameNumber) => {
   }
   else if (userNumber>gameNumber) {
     return "Too high!";
+  }
+  else if (userNumber === gameNumber) {
+    console.log("Correct! Game over.");
   }};
 
+  //Current game number:  
+const gameNumber = console.log(getRandomIntInclusive(1, 10));
 
-//Game logic//
+  //User guess variable establishment:
+let userNumber;
+
+
+//________________
+//GAME OPERATION//
 
 
 import prompt from "readline-sync";
 
 console.log(getRandomIntInclusive(1, 10));
 
-console.log("\nWelcome to the Guessing Game!\nPress ctrl+c to stop\n");
+console.log("\nWelcome to the Guessing Game!\nPress ctrl+c to stop.\n");
 
-const gameNumber = console.log(getRandomIntInclusive(1, 10));
-
-console.log(prompt.question("Please guess a number from 1 to 10"));
-
-let userNumber = prompt.question("Please guess a number between 1 through 10: ");
-
-if (userNumber === gameNumber) {
-  console.log("Success! Game over.");
-}
+console.log(prompt.question("\nPlease guess a number from 1 to 10.\n"));
 
 while (userNumber!=gameNumber) {
-  console.log(evaluate());
+  let userNumber=parseInt(prompt.question("Please guess a number from 1 to 10"), 10);
+  const feedback=evaluate(userNumber, gameNumber);
+  console.log(feedback);
+  if (feedback==="Correct! Game over.") {
+    break;
+  }
 }
+
+
 
 
 
