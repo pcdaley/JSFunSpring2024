@@ -24,8 +24,23 @@ const doubleNumber = (num) => {
  * @returns {array}
  */
 
-const doubleArray = (originalArray, doubleNumber) => {
-  // WRITE YOUR ANSWER IN HERE
+const doubleArray = (originalArray, callback) => {
+  let result = [];
+  for (let i=0; i<originalArray.length; i++) {
+    let doubledNumber=callback(originalArray[i]);
+    result.push(doubledNumber);
+    return result;
+  }
+};
+
+// Answer from solution - don't see the discrepancy?
+// const doubleArray = (originalArray, callback) => {
+//   const result = [];
+//   for (let i = 0; i < originalArray.length; i++) {
+//     const doubledNum = callback(originalArray[i]);
+//     result.push(doubledNum);
+//   }
+//   return result;
 };
 
 // Uncomment me to test your answer in Quokka
