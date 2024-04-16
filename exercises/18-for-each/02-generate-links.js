@@ -24,3 +24,7 @@ const links = [
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+const addATag = (link, i) => {
+  console.log("<a href=" + )
+}

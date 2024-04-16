@@ -9,3 +9,11 @@ const numbers = [1, 10, -2, 3, 4]; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const lowNumber = (number, i) => {
+  if (i < i+1) {
+    let lowestNumber = i;
+  }
+  console.log(lowestNumber);
+};
+
+numbers.forEach(lowestNumber);
