@@ -13,6 +13,10 @@
    * (See the comments in the HTML for what <span> tags to sue.)
    */
   // Write your answer here
+  const email = document.querySelector("#email");
+  email.addEventListener("change", (event) => {
+    document.querySelector("#emailOutput").textContent = event.target.value;
+  });
   /**
    * Problem 2: Handle a checkbox
    *

@@ -17,6 +17,14 @@
    * and you must prevent the page from refreshing when the form is submitted.
    */
   // Write your answer here
+  const oceanForm = document.querySelector("#oceanForm");
+  const oceanFormSearch = document.querySelector("#oceanFormSearch");
+  const oceanFormOutput = document.querySelector("#oceanFormOutput");
+  oceanForm.addEventListener("submit", event => {
+      event.preventDefault ();
+      const userSearch = oceanFormSearch.value;
+      oceanFormOutput.textContent = "No results for " + userSearch + " found";
+  });
   /**
    * Problem 2: Agree to the terms and conditions
    *

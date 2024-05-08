@@ -1,4 +1,15 @@
 (function () {
+  const quote = document.querySelector("#quote");
+
+  const getQuote = async () => {
+    const response = await axios.get("https://ron-swanson-quotes.herokuapp.com/v2/quotes");
+    
+  quote.textContent = response.data[0];
+  };
+
+  const button = document.querySelector("button");
+  button.addEventListener("click", getQuote);
+  
   /**
    * As a user, I should be able to click on a button and get a quote, so I can learn about what ron-swanson's opinions are.
    *

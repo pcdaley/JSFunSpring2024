@@ -30,11 +30,17 @@
      */
 
     // Write you JavaScript here
-  };
+  
+  const oceanOutput = document.createElement("p");
+    oceanOutput.textContent = `No results found for ${ocean}.`;
+    const problemOneParent = document.querySelector("#problemOne");
+    problemOneParent.appendChild(oceanOutput);
+};
 
   document
     .querySelector("#handleThisForm")
     .addEventListener("submit", handleSubmit);
+
 
   /**
    * Problem 2: Create a movie description from an object
@@ -58,9 +64,9 @@
    */
 
   // Update me
-  const movieHtml = `<img src="_____" />
+  const movieHtml = `<img src="${movie.imgSrc}" />
   <div class="flex-auto my-4">
-    <h1 class="text-2xl mb-4">_____ <small>(_____)</small></h1>
+    <h1 class="text-2xl mb-4">${movie.title} <small>(${movie.year})</small></h1>
     <p clas="mb-4">
       ${movie.description}
     </p>
@@ -73,6 +79,8 @@
    */
 
   // Write you JavaScript here
+
+  document.querySelector("#problemTwo").innerHTML = movieHtml;
 
   /**
    * Problem 3: Create a ChatGPT conversation from an array of objects
@@ -120,4 +128,16 @@
    */
 
   // Write you JavaScript here
+  const dialogue = document.querySelector("#dialogue");
+
+  conversationDialogues.forEach((exchange) => {
+    let dialogueHtml = `<div class="border-solid border-2 border-slate-200 rounded p-2 mb-4">
+      <div class="font-bold">${exchange.author}</div>
+      <p>
+        ${exchange.message}
+      </p>
+    </div>`;
+    dialogue.insertAdjacentHTML("beforeEnd", dialogueHtml);
+  });
+
 })();
